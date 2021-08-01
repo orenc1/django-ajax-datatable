@@ -46,7 +46,7 @@ def build_column_filter(column_name, column_obj, column_spec, search_value, glob
         raise Exception('Searching not supported for ManyToManyFields (yet)')
         pass
     else:
-        query_param_name = column_obj.get_field_search_path()
+        query_param_name = column_obj.name
         # #search_filters |= Q(**{query_param_name + '__istartswith': search_value})
         # search_filter = Q(**{query_param_name + '__icontains': search_value})
 
